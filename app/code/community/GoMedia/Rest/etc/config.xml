@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GoMedia_Rest>
+            <version>0.1.0</version>
+        </GoMedia_Rest>
+    </modules>
+    <global>
+        <models>
+            <gomediarest>
+                <class>GoMedia_Rest_Model</class>
+            </gomediarest>
+            <api2>
+                <rewrite>
+                    <acl_filter_attribute_resourcePermission>GoMedia_Rest_Model_Api2_Acl_Filter_Attribute_ResourcePermission</acl_filter_attribute_resourcePermission>
+                </rewrite>
+            </api2>
+        </models>
+    </global>
+</config>

@@ -1,0 +1,203 @@
+<config>
+    <api2>
+        <resource_groups>
+            <gomediarest translate="title" module="GoMedia_Rest">
+                <title>GoMedia Rest API</title>
+                <sort_order>10</sort_order>
+            </gomediarest>
+        </resource_groups>
+        <resources>
+            <gomediarest_configurable translate="title" module="GoMedia_Rest">
+                <group>gomediarest</group>
+                <model>gomediarest/api2_configurable</model>
+                <title>Configurable Product</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>
+                    </admin>
+                </privileges>
+                <attributes translate="entity_id type_id attribute_set_id stock_data image_url is_saleable total_reviews_count url buy_now_url has_custom_options is_in_stock regular_price_with_tax regular_price_without_tax final_price_with_tax final_price_without_tax use_config_gift_message_available use_config_gift_wrapping_available url_key_create_redirect" module="api2">
+                    <entity_id>Product ID</entity_id>
+                    <type_id>Product Type</type_id>
+                    <attribute_set_id>Attribute Set</attribute_set_id>
+                    <stock_data>Inventory Data</stock_data>
+                    <image_url>Default Image</image_url>
+                    <is_saleable>Salability Status</is_saleable>
+                    <total_reviews_count>Total Reviews Count</total_reviews_count>
+                    <url>Product URL</url>
+                    <buy_now_url>Buy Now URL</buy_now_url>
+                    <has_custom_options>Has Custom Options</has_custom_options>
+                    <is_in_stock>Stock Status</is_in_stock>
+                    <regular_price_with_tax>Regular Price With Tax</regular_price_with_tax>
+                    <regular_price_without_tax>Regular Price Without Tax</regular_price_without_tax>
+                    <final_price_with_tax>Final Price With Tax</final_price_with_tax>
+                    <final_price_without_tax>Final Price Without Tax</final_price_without_tax>
+                    <use_config_gift_message_available>Use Config Settings for Allow Gift Message</use_config_gift_message_available>
+                    <use_config_gift_wrapping_available>Use Config Settings for Allow Gift Wrapping</use_config_gift_wrapping_available>
+                    <url_key_create_redirect>Create Permanent Redirect for old URL</url_key_create_redirect>
+					<associated_products>Associated Products</associated_products>
+					<remove_associated_products>Remove Associated Products</remove_associated_products>
+					<attributes>Custom Product Attributes</attributes>
+                </attributes>
+                <exclude_attributes>
+					<admin>
+                        <write>
+                            <allow_open_amount>1</allow_open_amount>
+                            <giftcard_amounts>1</giftcard_amounts>
+                            <open_amount_min>1</open_amount_min>
+                            <open_amount_max>1</open_amount_max>
+                            <image>1</image>
+                            <is_recurring>1</is_recurring>
+                            <gallery>1</gallery>
+                            <media_gallery>1</media_gallery>
+                            <price_view>1</price_view>
+                            <small_image>1</small_image>
+                            <image_url>1</image_url>
+                            <is_saleable>1</is_saleable>
+                            <total_reviews_count>1</total_reviews_count>
+                            <url>1</url>
+                            <buy_now_url>1</buy_now_url>
+                            <has_custom_options>1</has_custom_options>
+                            <is_in_stock>1</is_in_stock>
+                            <regular_price_with_tax>1</regular_price_with_tax>
+                            <regular_price_without_tax>1</regular_price_without_tax>
+                            <final_price_with_tax>1</final_price_with_tax>
+                            <final_price_without_tax>1</final_price_without_tax>
+                            <recurring_profile>1</recurring_profile>
+                            <thumbnail>1</thumbnail>
+                            <entity_id>1</entity_id>
+                            <weight>1</weight>
+                        </write>
+					</admin>
+                </exclude_attributes>
+                <routes>
+                    <route_entity>
+                        <route>/configurable/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route>
+                        <route>/configurable</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </gomediarest_configurable>
+            <gomediarest_simple translate="title" module="GoMedia_Rest">
+                <group>gomediarest</group>
+                <model>gomediarest/api2_simple</model>
+                <title>Simple Product</title>
+                <sort_order>20</sort_order>
+                <working_model>catalog/product</working_model>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <update>1</update>
+                    </admin>
+                </privileges>
+                <attributes translate="entity_id type_id attribute_set_id stock_data image_url is_saleable total_reviews_count url buy_now_url has_custom_options is_in_stock regular_price_with_tax regular_price_without_tax final_price_with_tax final_price_without_tax use_config_gift_message_available use_config_gift_wrapping_available url_key_create_redirect" module="api2">
+                    <entity_id>Product ID</entity_id>
+                    <type_id>Product Type</type_id>
+                    <attribute_set_id>Attribute Set</attribute_set_id>
+                    <stock_data>Inventory Data</stock_data>
+                    <image_url>Default Image</image_url>
+                    <is_saleable>Salability Status</is_saleable>
+                    <total_reviews_count>Total Reviews Count</total_reviews_count>
+                    <url>Product URL</url>
+                    <buy_now_url>Buy Now URL</buy_now_url>
+                    <has_custom_options>Has Custom Options</has_custom_options>
+                    <is_in_stock>Stock Status</is_in_stock>
+                    <regular_price_with_tax>Regular Price With Tax</regular_price_with_tax>
+                    <regular_price_without_tax>Regular Price Without Tax</regular_price_without_tax>
+                    <final_price_with_tax>Final Price With Tax</final_price_with_tax>
+                    <final_price_without_tax>Final Price Without Tax</final_price_without_tax>
+                    <use_config_gift_message_available>Use Config Settings for Allow Gift Message</use_config_gift_message_available>
+                    <use_config_gift_wrapping_available>Use Config Settings for Allow Gift Wrapping</use_config_gift_wrapping_available>
+                    <url_key_create_redirect>Create Permanent Redirect for old URL</url_key_create_redirect>
+					<attributes>Custom Product Attributes</attributes>
+                </attributes>
+                <exclude_attributes>
+                    <admin>
+                        <write>
+                            <allow_open_amount>1</allow_open_amount>
+                            <giftcard_amounts>1</giftcard_amounts>
+                            <open_amount_min>1</open_amount_min>
+                            <open_amount_max>1</open_amount_max>
+                            <image>1</image>
+                            <is_recurring>1</is_recurring>
+                            <gallery>1</gallery>
+                            <media_gallery>1</media_gallery>
+                            <price_view>1</price_view>
+                            <small_image>1</small_image>
+                            <image_url>1</image_url>
+                            <is_saleable>1</is_saleable>
+                            <total_reviews_count>1</total_reviews_count>
+                            <url>1</url>
+                            <buy_now_url>1</buy_now_url>
+                            <has_custom_options>1</has_custom_options>
+                            <is_in_stock>1</is_in_stock>
+                            <regular_price_with_tax>1</regular_price_with_tax>
+                            <regular_price_without_tax>1</regular_price_without_tax>
+                            <final_price_with_tax>1</final_price_with_tax>
+                            <final_price_without_tax>1</final_price_without_tax>
+                            <recurring_profile>1</recurring_profile>
+                            <thumbnail>1</thumbnail>
+                            <entity_id>1</entity_id>
+                        </write>
+                    </admin>
+                </exclude_attributes>
+                <routes>
+                    <route_entity>
+                        <route>/simple/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route>
+                        <route>/simple</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </gomediarest_simple>
+            <gomediarest_category translate="title" module="GoMedia_Rest">
+                <group>gomediarest</group>
+                <model>gomediarest/api2_category</model>
+                <title>Category</title>
+                <sort_order>11</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <update>1</update>
+                        <delete>1</delete>
+                    </admin>
+                </privileges>
+                <attributes translate="entity_id name parent_id is_active is_anchor" module="api2">
+                    <entity_id>Category ID</entity_id>
+                    <name>Category Name</name>
+                    <parent_id>Parent ID</parent_id>
+                    <is_active>Is Active</is_active>
+                    <is_anchor>Is Anchor</is_anchor>
+                </attributes>
+                <exclude_attributes>
+                    <admin>
+                        <write>
+
+                        </write>
+                    </admin>
+                </exclude_attributes>
+                <routes>
+                    <route_entity>
+                        <route>/category/:id</route>
+                        <action_type>entity</action_type>
+                    </route_entity>
+                    <route>
+                        <route>/category</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </gomediarest_category>
+        </resources>
+    </api2>
+</config>

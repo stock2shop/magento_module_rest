@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GoMedia_Rest>
+            <active>true</active>
+            <codePool>community</codePool>
+        </GoMedia_Rest>
+    </modules>
+</config>
